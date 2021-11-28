@@ -124,3 +124,20 @@ xnoremap <C-w>n <Cmd>call <SID>splitNew('v', '__vscode_new__')<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 xnoremap <Up> dkP`[V`]
 xnoremap <Down> dp`[V`]
+
+
+" allows to wrap selected text in some tags
+function! s:wrapSelection()
+    let mode = mode()
+    if mode ==# 'V'
+        let startLine = line('v')
+        let endLine = line('.')
+        call VSCodeNotifyRange('editor.emmet.action.wrapWithAbbreviation', startLine, endLine, 1)
+    else
+        let startPos = getpos('v')
+        let endPos = getpos('.')
+        call VSCodeNotifyRangePos('editor.emmet.action.wrapWithAbbreviation', startPos[1], endPos[1], startPos[2], endPos[2] + 1, 1)
+    endif
+endfunction
+
+xnoremap <Leader>r <Cmd>call <SID>wrapSelection()<CR>
