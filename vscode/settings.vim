@@ -141,3 +141,20 @@ function! s:wrapSelection()
 endfunction
 
 xnoremap <Leader>r <Cmd>call <SID>wrapSelection()<CR>
+
+
+" Envolver la palabra en elr elemento escrito
+:nnoremap <Leader>a" ciw""<Esc>P
+:vnoremap <Leader>a" c""<Esc>P
+:nnoremap <Leader>a' ciw''<Esc>P
+:vnoremap <Leader>a' c''<Esc>P
+:nnoremap <Leader>a( ciw()<Esc>P
+:vnoremap <Leader>a( c()<Esc>P
+:nnoremap <Leader>a{ ciw{}<Esc>P
+:vnoremap <Leader>a{ c{}<Esc>P
+:nnoremap <Leader>a[ ciw[]<Esc>P
+:vnoremap <Leader>a[ c[]<Esc>P
+
+
+
+
