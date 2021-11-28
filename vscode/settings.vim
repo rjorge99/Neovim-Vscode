@@ -122,5 +122,5 @@ xnoremap <C-w>n <Cmd>call <SID>splitNew('v', '__vscode_new__')<CR>
 
 " Move lines up and down without loosing the cursor position
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-xnoremap <Leader>k dkP`[V`]
-xnoremap <Leader>j dp`[V`]
+xnoremap <Up> dkP`[V`]
+xnoremap <Down> dp`[V`]
