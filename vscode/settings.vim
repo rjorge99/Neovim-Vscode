@@ -155,6 +155,3 @@ xnoremap <Leader>r <Cmd>call <SID>wrapSelection()<CR>
 :nnoremap <Leader>a[ ciw[]<Esc>P
 :vnoremap <Leader>a[ c[]<Esc>P
 
-
-
-
