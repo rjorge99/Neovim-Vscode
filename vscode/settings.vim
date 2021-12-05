@@ -105,6 +105,7 @@ endfunction
 " window/splits management
 nnoremap <C-w>q <Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
 xnoremap <C-w>q <Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
+nnoremap <C-w>o <Cmd>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>
 
 nnoremap <C-w>h <Cmd>call <SID>split('h')<CR>
 xnoremap <C-w>h <Cmd>call <SID>split('h')<CR>
