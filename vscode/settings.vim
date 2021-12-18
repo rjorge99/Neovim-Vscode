@@ -156,3 +156,9 @@ xnoremap <Leader>r <Cmd>call <SID>wrapSelection()<CR>
 :nnoremap <Leader>a[ ciw[]<Esc>P
 :vnoremap <Leader>a[ c[]<Esc>P
 
+
+// Fold-unfold
+nnoremap <silent> <space>[ :call VSCodeNotify('editor.fold')<CR>
+nnoremap <silent> <space>] :call VSCodeNotify('editor.unfold')<CR>
+nnoremap <silent> <space>fa :call VSCodeNotify('editor.foldAll')<CR>
+nnoremap <silent> <space>ua :call VSCodeNotify('editor.unfoldAll')<CR>
