@@ -71,7 +71,7 @@ nnoremap <silent> <Space>w :call VSCodeNotify('whichkey.show')<CR>
 xnoremap <silent> <Space>w :<C-u>call <SID>openWhichKeyInVisualMode()<CR>
         
 " Save with Space + s
-nnoremap <silent> <Space>s :call VSCodeNotify('workbench.action.files.save')<CR>
+" nnoremap <silent> <Space>s :call VSCodeNotify('workbench.action.files.save')<CR>
 nnoremap <silent> <Space>p :call VSCodeNotify('workbench.action.quickOpen')<CR>
 
 xmap gc  <Plug>VSCodeCommentary
@@ -143,6 +143,21 @@ endfunction
 
 xnoremap <Leader>r <Cmd>call <SID>wrapSelection()<CR>
 
+function! s:sortSelectionInVisualMode()
+    normal! gv
+    let visualmode = visualmode()
+    if visualmode == "V"
+        let startLine = line("v")
+        let endLine = line(".")
+        call VSCodeNotifyRange("editor.action.sortLinesAscending", startLine, endLine, 1)
+    else
+        let startPos = getpos("v")
+        let endPos = getpos(".")
+        call VSCodeNotifyRangePos("editor.action.sortLinesAscending", startPos[1], endPos[1], startPos[2], endPos[2], 1)
+    endif
+endfunction
+
+xnoremap <Leader>s <Cmd>call <SID>sortSelectionInVisualMode()<CR>
 
 " Envolver la palabra en elr elemento escrito
 :nnoremap <Leader>a" ciw""<Esc>P
