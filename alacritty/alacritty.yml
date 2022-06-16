@@ -31,16 +31,16 @@ window.opacity: 1.0
 
 font:
   normal:
-    family: "JetBrainsMono NF"
+    family: "FiraCode NF"
     style: Regular
   bold:
-    family: "JetBrainsMono NF"
+    family: "FiraCode NF"
     style: Bold
   italic:
-    family: "JetBrainsMono NF"
+    family: "FiraCode NF"
     style: Italic
   bold_italic:
-    family: "JetBrainsMono NF"
+    family: "FiraCode NF"
     style: Bold Italic
 
   # Point size
@@ -48,7 +48,7 @@ font:
 
   offset:
     x: 0
-    y: 0
+    y: 2
   glyph_offset:
     x: 0
     y: 0
